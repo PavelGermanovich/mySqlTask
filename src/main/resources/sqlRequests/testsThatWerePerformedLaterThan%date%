@@ -1,0 +1,5 @@
+SELECT project.name as Project, test.name as TEST, start_time
+FROM union_reporting.test INNER JOIN union_reporting.project on
+test.project_id = project.id
+WHERE start_time >= '2015-11-07'
+order by project.name, test.name;

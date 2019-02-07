@@ -1,0 +1,4 @@
+SELECT project.name AS Project, COUNT(DISTINCT test.name) AS tests
+FROM union_reporting.test INNER JOIN union_reporting.project ON
+test.project_id = project.id
+GROUP BY project.name;

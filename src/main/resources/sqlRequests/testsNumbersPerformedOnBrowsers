@@ -1,0 +1,7 @@
+SELECT COUNT(name) AS tests_number, browser
+FROM union_reporting.test
+WHERE browser = '%s'
+UNION
+SELECT COUNT(name), browser
+FROM union_reporting.test
+WHERE browser = '%s'

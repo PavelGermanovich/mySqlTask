@@ -1,0 +1,4 @@
+SELECT project.name AS project, test.name AS tests, end_time-start_time AS min_time
+FROM union_reporting.test INNER JOIN union_reporting.project on
+test.project_id = project.id
+order by project.name, test.name;
